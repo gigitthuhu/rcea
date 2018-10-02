@@ -18,8 +18,9 @@ export const ExpenseList = (props) => (
 );
 
 const mapStateToProps = (state) => {
+  const selected = selectExpenses(state.expenses, state.filters);
   return {
-    expenses: selectExpenses(state.expenses, state.filters)
+    expenses: selected
   };
 };
 
